@@ -1,0 +1,1 @@
+ select manager_id from department where budget>100000; 
