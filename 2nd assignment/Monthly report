@@ -1,0 +1,1 @@
+ select o.id,o.date,v.color,v.price,o.total,u.user_name,u.user_email from orders o,variants v,user u,product_order po,payment p where o.id=p.order_id and po.variant_id=v.id and DATE_ADD(now(),INTERVAL -31 DAY);

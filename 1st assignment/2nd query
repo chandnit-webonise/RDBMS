@@ -1,0 +1,1 @@
+SELECT (SELECT employee_name FROM employees WHERE employee_id=d.manager_id) AS Manager,GROUP_CONCAT(e.employee_name) As employe_names FROM works w,departments d,employees e WHERE w.department_id_fk=d.department_id AND w.employee_id_fk<>d.manager_id AND  e.employee_id=w.employee_id_fk GROUP BY w.department_id_fk;

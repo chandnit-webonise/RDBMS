@@ -1,0 +1,2 @@
+CREATE VIEW view_orders
+AS SELECT orders.id, orders.total, payment.transaction_date,discounts.amount,payment.payment_mode,payment.payment_status FROM payment,orders,discounts WHERE discounts.id=orders.discount_id and payment.order_id=orders.id;
